@@ -6,16 +6,17 @@ public class Empregado{
     private double salario;
     private double comissao;
     private double bonus;
+
     public double calculaSalario(){
         if (tipo == 1 )
-        returnsalario;
+        return salario;
     }
     else if (tipo == 2){
-        //comissão caria de 0 a 1
+        //comissão caria de 0 a 1, é um percentual sobre o salário
         return salario + salario * comissao;
     }
     else if (tipo == 3){
-        returnsalario + bonus;
+        return salario + bonus;
     }
     else{
         return 0.;
@@ -35,5 +36,13 @@ public class Empregado{
 
     public void setIdade (int idade){
         this.idade = idade;
+    }
+    
+    public void setTipo (int tipo){
+        this.tipo = tipo;
+    }
+    
+    public int tipo (){
+        return this.tipo;
     }
 }
